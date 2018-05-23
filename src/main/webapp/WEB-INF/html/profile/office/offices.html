@@ -1,0 +1,28 @@
+<div class="col-md-5">
+	<div>
+		<label for="SelectOffice">All Offices: </label>
+		<select size="200000" style="height: 450px; max-width: 200px;" name="SelectOffice" id="SelectOffice" ng-model="selectedOffices"
+			ng-options="off.name + (off.address2 ? ' - ' + off.address2 : ''); for off in allOffices">
+		</select> <br />
+	</div>
+	<br>
+	<div>
+		<input type="button" ng-click="editOffice(selectedOffices)" value="Select" class="btn-warning" />
+		&nbsp;
+		<input ng-show="false" type="button" ng-click="deleteOffice(selectedOffices)" value="Delete" class="btn-danger" />
+		&nbsp;
+	</div>
+</div>
+<div ng-show="loggedIn" class="col-md-2">
+	<div style="padding-top: 230px">
+		<input type="button" ng-click="saveOfficeToUser(selectedOffices)" ng-disabled="!user.id" value=">>>>" class="btn-success" />
+		<br /> <br />
+		<input type="button" ng-click="deleteOfficeFromUser(selectedUserOffice)" value="<<<<" ng-disabled="!user.id" class="btn-danger" />
+	</div>
+</div>
+<div ng-show="loggedIn" class="col-md-5">
+	<label for="UserOffice">{{user.firstname}}'s Office: </label>
+	<select size="200" style="height: 450px; max-width: 200px;" name="SelectOffice" id="SelectOffice" ng-model="selectedUserOffice"
+		ng-options="off.name + (off.address2 ? ' - ' + off.address2 : '') for off in userOffices">
+	</select> <br />
+</div>

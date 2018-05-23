@@ -1,0 +1,15 @@
+
+<div class="form-group">
+	<label for="icon" class="col-md-3">&nbsp; &nbsp; &nbsp;Icon Pointer: </label>
+	<div class="col-md-7">
+		<input class="form-control" type="text" id="icon" name="icon" ng-model="user.icon" maxlength="45"
+			placeholder="Point to any existing icon by name" />
+	</div>
+</div>
+<div class="form-group">
+	<label for="icon" class="col-md-3">&nbsp; &nbsp; &nbsp;Upload Icon: </label>
+	<div class="col-md-7">
+		<input multiple type="file" onchange="angular.element(this).scope().onSelectUserIcon(this)" id="browse" name="browse">
+		<span>{{uploadMessage}}</span>
+	</div>
+</div>

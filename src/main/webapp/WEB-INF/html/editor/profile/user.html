@@ -1,0 +1,27 @@
+
+<div class="row well">
+	<div class="col-md-8">
+		<div class="row">
+			<form novalidate class="form-horizontal" role="form" name="userForm">
+				<br> <br>
+				<ng-include src="'html/profile/user/form.html'"></ng-include>
+				<ng-include src="'html/profile/user/formImage.html'"></ng-include>
+				<ng-include src="'html/profile/user/buttons.html'"></ng-include>
+				<div>
+					<span ng-show='userForm.$invalid && userForm.$dirty' style="color: red">This form has errors</span>
+				</div>
+			</form>
+		</div>
+		<br /> <br />
+		<ng-include src="'html/profile/user/image.html'"></ng-include>
+	</div>
+
+	<div class="col-md-4">
+		<br />
+		<ng-include src="'html/profile/user/users.html'"></ng-include>
+		<div>
+			<input ng-show="false" type="button" ng-click="deleteUser(selectedUser)" value="Delete" class="btn-danger" />
+			&nbsp;
+		</div>
+	</div>
+</div>

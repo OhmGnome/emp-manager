@@ -1,0 +1,63 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-1">&nbsp;</div>
+		<div class="col-md-10">
+			
+			<div></div>
+			
+<!-- 			<p>Since this is a trial account, unverified number can't receive text messages. -->
+<!-- 			Please verify your phone number first</p> -->
+<!-- 			<div> -->
+<!-- 				<input ng-model="verifyNumber"/> -->
+<!-- 				<button ng-click="verify(verifyNumber)">Verify</button> -->
+<!-- 				{{validationCode}} -->
+<!-- 			</div> -->
+<!-- 			<p>Click on "Get Image" button to get an image which you can send with the text message.</p> -->
+<!-- 			<div> -->
+<!-- 				<button ng-click="getPortrait('image1.jpg')">Get Image</button> -->
+<!-- 				<div> -->
+<!-- 					<img id="portraitImg" style="padding-left:100px" ng-src="{{portrait}}"> -->
+<!-- 				</div>  -->
+<!-- 			</div> -->
+<!-- 			<div> -->
+<!-- 				<p>Required phone number and message</p> -->
+<!-- 				<form name="msmform"> -->
+<!-- 					<div class="form-group"> -->
+<!-- 						<label for="toNumber" class="col-md-3">&nbsp; &nbsp; -->
+<!-- 							&nbsp;To Number: </label> -->
+<!-- 						<div class="col-md-7"> -->
+<!-- 							<input class="form-control" type="text" id="toNumber" -->
+<!-- 								name="toNumber" ng-model="toNumber" maxlength="11" required /> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="form-group"> -->
+<!-- 						<label for="textMsg" class="col-md-3">&nbsp; &nbsp; -->
+<!-- 							&nbsp;Message: </label> -->
+<!-- 						<div class="col-md-7"> -->
+<!-- 							<input class="form-control" type="text" id="textMsg" -->
+<!-- 								name="textMsg" ng-model="textMessage" maxlength="1600" required /> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</form> -->
+<!-- 				<div> -->
+<!-- 					<button ng-click="send(toNumber, textMessage, portrait)" ng-disabled="(msmform.$invalid && msmform.$dirty)">Send</button> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<br/><br/><br/><br/><br/><br/><br/><br/> -->
+			
+			<!--  map -->
+			<div>
+				<input type="button" ng-click="toggleEmployees()"
+					value="{{employeeButtonText}} Employees" /> 
+				<input type="button"
+					ng-click="toggleOffice()" value="{{officeButtonText}} Office" /> 
+				<input
+					type="submit" ng-click="hide()" value="Hide" />
+			</div>
+			&nbsp;&nbsp;
+			<div id="map"
+				style="width: 1000px; height: 800px; background-color: #CCC">
+			</div>
+		</div>
+	</div>
+</div>

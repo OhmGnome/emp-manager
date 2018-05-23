@@ -1,0 +1,39 @@
+<div class="container">
+	<form novalidate role="form" name="authForm">
+
+		<div class="form-group">
+			<label for="email" class="col-md-3">&nbsp; &nbsp; &nbsp;E-mail: </label>
+			<div class="col-md-7">
+				<input class="form-control" type="text" id="email" name="email" ng-model="user.email" />
+							<br> <span class="error" ng-show="authForm.email.$error.required && authForm.$dirty" style="color: red">! Email is
+					required</span>
+			</div>
+		</div>
+		&nbsp;&nbsp;
+		<div class="form-group">
+			&nbsp;
+			<label for="username" class="col-md-3">&nbsp; &nbsp; &nbsp;Username: </label>
+			<div class="col-md-7">
+				<input class="form-control" type="text" id="username" name="username" ng-model="user.username" />
+				<br> <span class="error" ng-show="authForm.username.$error.required && authForm.$dirty" style="color: red">! Username is
+					required</span>
+			</div>
+		</div>
+		&nbsp;&nbsp;
+		<div class="form-group">
+			&nbsp;
+			<label for="password" class="col-md-3">&nbsp; &nbsp; &nbsp;Password: </label>
+			<div class="col-md-7">
+				<input class="form-control" type="password" id="password" name="password" ng-model="user.password" />
+			</div>
+		</div>
+
+		
+		<div>
+		&nbsp;&nbsp; <br>
+		<button class="btn btn-primary" type="submit" ng-disabled="userForm.$invalid" ng-click='registerUser()'>Register</button>
+			<span ng-show='authForm.$invalid && authForm.$dirty' style="color: red">This form has errors</span>
+			<span style="color: red">{{registered}}</span>
+		</div>
+	</form>
+</div>

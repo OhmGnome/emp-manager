@@ -1,0 +1,8 @@
+
+<div class="form-group">
+	<label for="{{property}}" class="col-md-3">&nbsp; &nbsp; &nbsp;{{property}}: </label>
+	<div class="col-md-7">
+		<input class="form-control" type="text" id="{{property}}" name="{{property}}" 
+		ng-model="obj[property]" maxlength="45" ng-disabled="(property.toString() === 'email' || property === 'username')"/>
+	</div>
+</div>

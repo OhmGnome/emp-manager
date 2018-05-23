@@ -1,0 +1,34 @@
+<div id="secureProfile">
+	<div class="col-md-1">&nbsp;</div>
+	<div ng-controller="AccordionDemoCtrl" class="col-md-10">
+	
+		<script type="text/ng-template" id="group-template.html">
+    <div class="panel {{panelClass || 'panel-default'}}">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
+            ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+      </div>
+    </div>
+ 			 </script>
+ 			 
+		<uib-accordion close-others="oneAtATime"> <uib-accordion-group heading="Employee : {{user.firstname}} {{user.lastname}}"
+			is-open="status.isFirstOpen">
+			<ng-include src="'html/secure/profile/user.html'"></ng-include>
+		</uib-accordion-group> 
+		
+		<uib-accordion-group heading="Skills"> <br />
+			<ng-include src="'html/secure/profile/skill.html'"></ng-include>
+		</uib-accordion-group> 
+		
+		<uib-accordion-group heading="Office : {{userOffices[0].name}} {{userOffices[0].address2}}"> <br />
+			<ng-include src="'html/secure/profile/office.html'"></ng-include>
+		</uib-accordion-group> 
+		</uib-accordion>
+		
+	</div>
+</div>

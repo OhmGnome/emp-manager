@@ -1,0 +1,13 @@
+<div>
+	<div class="col-md-3">&nbsp;</div>
+	<div class="col-md-5">
+		<input type="button" ng-click="saveUser()" ng-disabled="userForm.$invalid || !userForm.$dirty" value="Save" class="btn-success" />
+		&nbsp;
+		<input type="button" ng-click="resetUser()" value="Reset" class="btn-danger" />
+		&nbsp;
+	</div>
+	<div class="col-md-3">&nbsp;</div>
+	<div class="col-md-5">
+		<span>{{messageUserSaved}}</span>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+
+<div>
+	<label for="selectUsers">All Employees: </label>
+	<br> <select size="200000" style="height: 440px; max-width: 300px;" name="selectUsers" id="selectUsers" ng-model="selectedUser"
+		ng-options="u.firstname +' ' + (u.lastname || '') for u in allUsers">
+	</select> <br>
+</div>
+<br />
+<div>
+	<input type="button" ng-click="editUser(selectedUser)" value="Select" class="btn-success" />
+	&nbsp;
+</div>

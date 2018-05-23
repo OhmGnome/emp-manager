@@ -1,0 +1,26 @@
+
+<div class="col-md-5">
+	<label for="SelectSkills">All Skills: </label>
+	<br> <select multiple style="height: 350px; max-width: 300px;" name="SelectSkills" id="SelectSkills" ng-model="selectedSkills"
+		ng-options="tech.skill +(tech.description ? ' - ' + tech.description : '') for tech in allSkills">
+	</select> <br> <br>
+	<div>
+		<input type="button" ng-click="editSkill(selectedSkills)" value="Edit" class="btn-warning" />
+		&nbsp;
+		<input ng-show="false" type="button" ng-click="deleteSkill(selectedSkills)" value="Delete" class="btn-danger" />
+		&nbsp;
+	</div>
+</div>
+<div class="col-md-2">
+	<div style="padding-top: 170px">
+		<input type="button" ng-click="saveSkillsToUser(selectedSkills)" value=">>>>" ng-disabled="!user.id" class="btn-success" />
+		<br /> <br />
+		<input type="button" ng-click="deleteSkillsFromUser(selectedUserSkills)" value="<<<<" ng-disabled="!user.id" class="btn-danger" />
+	</div>
+</div>
+<div class="col-md-5">
+	<label for="SelectUserSkills">{{user.firstname}}'s Skills: </label>
+	<br> <select multiple style="height: 350px; max-width: 300px;" name="SelectUserSkills" id="SelectUserSkills"
+		ng-model="selectedUserSkills" ng-options="skill.skill + (skill.description? ' - ' + skill.description : '') for skill in userSkills">
+	</select> <br>
+</div>

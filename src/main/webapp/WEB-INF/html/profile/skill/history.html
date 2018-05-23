@@ -1,0 +1,24 @@
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<!-- expand the table when the role is viewer -->
+			<!-- when the status is not logged in -->
+			<th ng-show="!loggedIn"></th>
+			<th colspan="1" class="text-center">Skills History</th>
+			<th></th>
+		</tr>
+		<tr>
+			<th class="text-center">Skill</th>
+			<th ng-show="!loggedIn" class="text-center">Description</th>
+			<th class="text-center">Acquired On</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="uSkill in skillsHistory">
+			<td class="text-center" style="max-width: 60px">{{ uSkill.skill.skill }}</td>
+			<td ng-show="!loggedIn" class="text-center">{{ uSkill.skill.description }}</td>
+			<td class="text-center" style="max-width: 60px">{{ uSkill.timestamp | date : format}}</td>
+		</tr>
+	</tbody>
+</table>
